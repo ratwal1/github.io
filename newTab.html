@@ -38,8 +38,17 @@
             hidden = true;
         });
         $('.learnMore').click(function(){
-            $('.show').show(100);
-            $('#firstPic').css('background', '#194a8b');
+            if(hidden){
+                $('.show').show(100);
+                $('#firstPic').css('background', '#194a8b');
+                hidden = false;
+            }else{
+                $('.show').hide(100);
+                $('#firstPic').css('background', 'url(one.jpg)');
+                hidden = true;
+            }
+            
+            
         });
     });
     </script>
@@ -116,7 +125,7 @@
 <body style="background-color: white; font-family: 'Open Sans',sans-serif; margin: 0 auto;  color: white; ">
     <div id="overlay" onclick="off()">
             <div class="modal">
-                    <img src="fueledby.png" id="image">
+                    <img src="fueledBy.png" id="image">
                     <h4 id="message"></h4>
             </div>
     </div>
